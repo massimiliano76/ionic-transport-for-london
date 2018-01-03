@@ -1,11 +1,24 @@
 {
+  "extends": [
+    "tslint:recommended",
+    "./res/scripts/tslint.js"
+  ],
   "rules": {
-    "no-duplicate-variable": true,
-    "no-unused-variable": [
-      true
-    ]
+    "no-attribute-parameter-decorator": true,
+    "no-forward-ref": true,
+    "no-input-rename": true,
+    "no-output-rename": true,
+
+    "use-host-property-decorator": true,
+    "use-input-property-decorator": true,
+    "use-life-cycle-interface": true,
+    "use-output-property-decorator": true,
+    "use-pipe-transform-interface": true,
+
+    "array-bracket-spacing": [true, "always"],
+    "object-curly-spacing": [true, "always"]
   },
   "rulesDirectory": [
-    "node_modules/tslint-eslint-rules/dist/rules"
+    "node_modules/codelyzer"
   ]
 }
