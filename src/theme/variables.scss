@@ -34,11 +34,23 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #1a5a92,
-  secondary:  #2d3039,
-  danger:     #cc3333,
-  light:      #fff,
-  dark:       #000
+  primary: #1a5a92,
+  secondary: #2d3039,
+  danger: #cc3333,
+  light: #fff,
+  dark: #000,
+
+  bakerloo: #996633,
+  central: #cc3333,
+  circle: #ffcc00,
+  district: #006633,
+  hammersmith-city: #cc9999,
+  jubilee: #868f98,
+  metropolitan: #660066,
+  northern: #000,
+  picadilly: #0019a8,
+  victoria: #0099cc,
+  waterloo-city: #66cccc
 );
 
 

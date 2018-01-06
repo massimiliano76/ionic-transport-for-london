@@ -1,0 +1,8 @@
+<button ion-item (click)="openLineStatus()">
+
+  <ion-icon name="alert" item-start *ngIf="lineStatus.statusSeverity !== 10"></ion-icon>
+  <ion-icon name="information-circle" item-start *ngIf="lineStatus.statusSeverity === 10"></ion-icon>
+
+  <span>{{lineStatus.statusSeverityDescription}}</span>
+
+</button>
