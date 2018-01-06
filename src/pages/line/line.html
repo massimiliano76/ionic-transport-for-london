@@ -1,0 +1,28 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>{{line.name}}</ion-title>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <ion-list no-lines>
+    <ion-list-header>Line Status</ion-list-header>
+    <component-line-status-item *ngFor="let lineStatus of lineStatuses" [lineStatus]="lineStatus"></component-line-status-item>
+  </ion-list>
+
+  <ion-list no-lines>
+    <ion-list-header>Stop Points</ion-list-header>
+    <component-stop-point-item *ngFor="let stopPoint of stopPoints" [stopPoint]="stopPoint"></component-stop-point-item>
+  </ion-list>
+
+</ion-content>

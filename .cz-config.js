@@ -43,6 +43,9 @@ module.exports = {
   scopes: [
     {
       name: 'home'
+    },
+    {
+      name: 'lines'
     }
   ],
 
