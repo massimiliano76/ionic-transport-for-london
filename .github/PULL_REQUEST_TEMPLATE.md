@@ -4,12 +4,12 @@
 - [ ] Tests For Changes Have Been Added
 - [ ] Docs Have Been Added Or Updated
 
-## Current Behavior
+## Current Behaviour
 <!-- Please describe the current behavior that you are modifying, or link to a relevant issue. -->
 Issue Number: N/A
 
 
-## New Behavior
+## New Behaviour
 <!-- Please describe the new behavior that you have implemented. -->
 
 

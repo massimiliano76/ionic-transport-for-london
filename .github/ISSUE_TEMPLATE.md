@@ -5,11 +5,11 @@
 [ ] Feature Request
 </code></pre>
 
-## Current Behavior
+## Current Behaviour
 <!-- Describe how the issue manifests. -->
 
 
-## Expected Behavior
+## Expected Behaviour
 <!-- Describe what the desired behavior would be. -->
 
 
