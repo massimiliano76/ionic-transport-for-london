@@ -46,6 +46,9 @@ module.exports = {
     },
     {
       name: 'lines'
+    },
+    {
+      name: 'stop-points'
     }
   ],
 

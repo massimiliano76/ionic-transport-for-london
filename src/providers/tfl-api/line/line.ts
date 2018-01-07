@@ -3,11 +3,11 @@ import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
 import { Observable } from 'rxjs/Observable';
 
-import { LineMode } from '../../enums/line-mode';
-import { IDisruption } from '../../models/line/disruption';
-import { ILine } from '../../models/line/line';
-import { ILineStatus } from '../../models/line/line-status';
-import { IStopPoint } from '../../models/line/stop-point/stop-point';
+import { LineMode } from '../../../enums/tfl-api/line-mode';
+import { IDisruption } from '../../../models/tfl-api/disruption';
+import { ILine } from '../../../models/tfl-api/line';
+import { ILineStatus } from '../../../models/tfl-api/line-status';
+import { IStopPoint } from '../../../models/tfl-api/stop-point';
 
 @Injectable()
 export class LineProvider {

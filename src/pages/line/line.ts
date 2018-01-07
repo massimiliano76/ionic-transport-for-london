@@ -1,11 +1,18 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {
+  IonicPage,
+  LoadingController,
+  NavController,
+  NavParams,
+} from 'ionic-angular';
+import 'rxjs/add/observable/forkJoin';
 import 'rxjs/add/operator/first';
+import { Observable } from 'rxjs/Observable';
 
-import { ILine } from '../../models/line/line';
-import { ILineStatus } from '../../models/line/line-status';
-import { IStopPoint } from '../../models/line/stop-point/stop-point';
-import { LineProvider } from '../../providers/line/line';
+import { ILine } from '../../models/tfl-api/line';
+import { ILineStatus } from '../../models/tfl-api/line-status';
+import { IStopPoint } from '../../models/tfl-api/stop-point';
+import { LineProvider } from '../../providers/tfl-api/line/line';
 
 @IonicPage()
 @Component({
@@ -19,6 +26,7 @@ export class LinePage {
 
   constructor(
       private lineProvider: LineProvider,
+      private loadingCtrl: LoadingController,
       private navCtrl: NavController,
       private navParams: NavParams,
   ) {
@@ -26,12 +34,20 @@ export class LinePage {
   }
 
   private ionViewWillEnter() {
-    this.lineProvider.getLineStatuses(this.line.id).first().subscribe(
-        (lineStatuses: ILineStatus[]) => this.lineStatuses = lineStatuses,
-    );
+    const LOADING = this.loadingCtrl.create({
+      cssClass: 'transparent',
+    });
 
-    this.lineProvider.getStopPointsByLine(this.line.id).first().subscribe(
-        (stopPoints: IStopPoint[]) => this.stopPoints = stopPoints,
-    );
+    LOADING.present();
+
+    Observable.forkJoin(
+        this.lineProvider.getLineStatuses(this.line.id),
+        this.lineProvider.getStopPointsByLine(this.line.id),
+    ).first().subscribe((response: [ILineStatus[], IStopPoint[]]) => {
+      this.lineStatuses = response[0];
+      this.stopPoints = response[1];
+
+      LOADING.dismiss();
+    });
   }
 }

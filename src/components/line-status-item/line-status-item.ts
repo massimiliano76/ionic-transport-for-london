@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-import { ILineStatus } from '../../models/line/line-status';
+import { ILineStatus } from '../../models/tfl-api/line-status';
 
 @Component({
   selector: 'component-line-status-item',

@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
 import 'rxjs/add/operator/first';
 
-import { LineMode } from '../../enums/line-mode';
-import { ILine } from '../../models/line/line';
-import { LineProvider } from '../../providers/line/line';
+import { LineMode } from '../../enums/tfl-api/line-mode';
+import { ILine } from '../../models/tfl-api/line';
+import { LineProvider } from '../../providers/tfl-api/line/line';
 
 @IonicPage()
 @Component({

@@ -1,0 +1,11 @@
+<ion-item>
+
+  <ion-icon [color]="departure.lineId" name="subway" item-start></ion-icon>
+
+  <h2>{{departure.towards}}</h2>
+
+  <h4 *ngIf="departure.timeToStation > 60">{{departure.expectedArrival | date:'shortTime'}} - {{convertSecondsToMinutes(departure.timeToStation)}} mins</h4>
+  <h4 *ngIf="departure.timeToStation <= 60">Stand Back - Train Approaching</h4>
+
+  <p>{{departure.currentLocation}}</p>
+</ion-item>

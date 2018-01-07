@@ -8,7 +8,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { InterceptorModule } from '../interceptors/interceptor.module';
-import { LineProvider } from '../providers/line/line';
+import { LineProvider } from '../providers/tfl-api/line/line';
+import { StopPointProvider } from '../providers/tfl-api/stop-point/stop-point';
 import { MyApp } from './app.component';
 
 registerLocaleData(localeEnGb);
@@ -33,6 +34,7 @@ registerLocaleData(localeEnGb);
     LineProvider,
     StatusBar,
     SplashScreen,
+    StopPointProvider,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     { provide: LOCALE_ID, useValue: 'en-GB' },
   ],

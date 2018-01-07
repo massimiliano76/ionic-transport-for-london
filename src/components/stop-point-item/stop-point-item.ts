@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-import { IStopPoint } from '../../models/line/stop-point/stop-point';
+import { IStopPoint } from '../../models/tfl-api/stop-point';
 import { NavController } from 'ionic-angular';
 
 @Component({
