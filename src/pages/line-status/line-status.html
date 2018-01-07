@@ -1,0 +1,25 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>Line Status</ion-title>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <h2>{{lineStatus.statusSeverityDescription}}</h2>
+
+  <ng-container *ngIf="lineStatus.statusSeverity !== 10">
+    <h4 *ngIf="lineStatus.disruption.lastUpdate">Last Updated: {{lineStatus.disruption.lastUpdate | date:'medium'}}</h4>
+    <p>{{lineStatus.disruption.description || lineStatus.disruption.summary}}</p>
+  </ng-container>
+
+</ion-content>
