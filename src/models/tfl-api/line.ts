@@ -1,6 +1,6 @@
 import { IDisruption } from './disruption';
 import { ILineStatus } from './line-status';
-import { IServiceType } from './stop-point/service-type';
+import { IServiceType } from './service-type';
 
 export interface ILine {
   created: Date;

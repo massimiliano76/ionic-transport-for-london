@@ -1,9 +1,9 @@
-import { LineMode } from '../../../enums/line-mode';
-import { PlaceType } from '../../../enums/place-type';
+import { LineMode } from '../../enums/tfl-api/line-mode';
+import { PlaceType } from '../../enums/tfl-api/place-type';
 import { IAdditionalProperties } from './additional-properties';
-import { IIdentifier } from '../identifier';
-import { ILineGroup } from '../line-group';
-import { ILineModeGroup } from '../line-mode-group';
+import { IIdentifier } from './identifier';
+import { ILineGroup } from './line-group';
+import { ILineModeGroup } from './line-mode-group';
 
 export interface IStopPoint {
   additionalProperties: IAdditionalProperties;

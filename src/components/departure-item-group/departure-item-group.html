@@ -1,0 +1,5 @@
+<ion-item-group>
+  <ion-item-divider color="secondary">{{entry.key}}</ion-item-divider>
+
+  <component-departure-item *ngFor="let departure of entry.value" [departure]="departure"></component-departure-item>
+</ion-item-group>

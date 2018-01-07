@@ -1,4 +1,4 @@
-import { IdentifierType } from '../../enums/identifier-type';
+import { IdentifierType } from '../../enums/tfl-api/identifier-type';
 
 export interface IIdentifier {
   crowding: { };
